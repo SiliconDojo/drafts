@@ -100,6 +100,7 @@ while True:
 
 ## Functions
 
+**Simple Function**
 ```
 def my_function():
     print('hello world')
@@ -107,6 +108,7 @@ def my_function():
 my_function()
 ```
 
+**Send Value to Function**
 ```
 def my_function(name):
     print(f'hello {name}')
@@ -116,3 +118,18 @@ while True:
     my_function(name)
 ```
 
+**Send Multiple Values to Function**
+```
+def my_function(name, age):
+    age_minimum = 18
+    print(f'hello {name}')
+    if age >= age_minimum:
+        print(f'{age} is old enough')
+    else:
+        print(f'{age} is too young')
+
+while True:
+    name = input('Your Name? ')
+    age = int(input('Your Age? '))
+    my_function(name, age)
+```
