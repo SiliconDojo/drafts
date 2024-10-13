@@ -133,3 +133,41 @@ while True:
     age = int(input('Your Age? '))
     my_function(name, age)
 ```
+
+## Write to File
+
+```
+import random
+from time import sleep
+
+while True:
+    number = random.randint(0,100)
+
+    with open('demo.html', 'w') as file:
+        file.write(str(number))
+    
+    print(number)
+    sleep(1)
+```
+
+```
+import random
+from time import sleep
+
+while True:
+    number = random.randint(0,100)
+    color = ''
+
+    if number >= 80:
+        color = 'red'
+    elif number < 80 and number >= 40:
+        color = 'green'
+    else:
+        color = 'blue'
+
+    with open('demo.html', 'w') as file:
+        file.write(f'<h1 style="background-color:{color};">{number}</h1>')
+    
+    print(number)
+    sleep(1)
+```
