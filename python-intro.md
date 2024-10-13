@@ -51,7 +51,7 @@ while True:
 
 ```
 
-## If / Else Statements
+## If / Elif /Else Statements
 
 ```
 import random
