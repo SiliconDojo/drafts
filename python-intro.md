@@ -50,3 +50,24 @@ while True:
     print(total)
 
 ```
+
+## If / Else Statements
+
+```
+import random
+
+number = random.randint(0,10)
+
+while True:
+    guess = int(input('Guess a Number: '))
+
+    if guess == number:
+        print(f'{guess} was right!')
+        break
+    elif guess > number:
+        print(f'{guess} is too high')
+    elif guess < number:
+        print(f'{guess} is too low')
+    else:
+        print(f'problem with {guess}')
+```
