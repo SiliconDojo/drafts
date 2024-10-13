@@ -97,3 +97,22 @@ while True:
     else:
         print(f'problem with {guess}')
 ```
+
+## Functions
+
+```
+def my_function():
+    print('hello world')
+
+my_function()
+```
+
+```
+def my_function(name):
+    print(f'hello {name}')
+
+while True:
+    name = input('Your Name? ')
+    my_function(name)
+```
+
