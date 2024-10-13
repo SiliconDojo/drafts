@@ -71,3 +71,29 @@ while True:
     else:
         print(f'problem with {guess}')
 ```
+
+## Try / Except
+
+```
+import random
+
+number = random.randint(0,10)
+
+while True:
+    while True:
+        try:
+            guess = int(input('Guess a Number: '))
+            break
+        except:
+            print(f'{guess} is not a number')
+
+    if guess == number:
+        print(f'{guess} was right!')
+        break
+    elif guess > number:
+        print(f'{guess} is too high')
+    elif guess < number:
+        print(f'{guess} is too low')
+    else:
+        print(f'problem with {guess}')
+```
