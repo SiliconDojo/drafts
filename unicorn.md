@@ -23,6 +23,34 @@ sudo kill -9 <PID>
 gunicorn --workers 4 --bind 0.0.0.0:8080 gtest:app
 ```
 
+## Basic Setup
+
+mkdir appname
+cd appname
+sudo apt install python3-venv
+python3 -m venv VENVNAME
+source VENVNAME/bin/activate
+python3 -m pip install bottle
+python3 -m pip install gunicorn
+
+**my-app.py**
+When everything is setup you will have to restart your app service (not NGINX) for changes to show to users
+```
+from bottle import route, run, default_app
+
+@route('/')
+def index():
+    return('hello world')
+
+if __name__ == "__main__":
+    run(host='0.0.0.0', port=8080)
+
+#create a name for your app.  wsgi reference will look like my-app:app_name
+app_name = default_app() 
+
+```
+
+
 **Create a Service**
 ```
 sudo nano /etc/systemd/system/APPNAME.system
@@ -36,8 +64,8 @@ After=network.target
 User=USERNAME
 Group=www-data
 WorkingDirectory=/home/USERNAME/APPFOLDER
-Enviornment="PATH=/home/USERNAME/APPNAME/venv/bin"
-ExecStart=/home/USERNAME/APPNAME/venv/bin/gunicorn --workers 3 --bind 127.0.0.1:8000 SCRIPTNAME:APPNAME
+Enviornment="PATH=/home/USERNAME/APPNAME/VENVNAME/bin"
+ExecStart=/home/USERNAME/APPNAME/VENVNAME/bin/gunicorn --workers 3 --bind 127.0.0.1:8000 SCRIPTNAME:APPNAME
 
 [Install]
 WantedBy=multi.user.target
