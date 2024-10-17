@@ -22,3 +22,48 @@ sudo kill -9 <PID>
 ```
 gunicorn --workers 4 --bind 0.0.0.0:8080 gtest:app
 ```
+
+**Create a Service**
+```
+sudo nano /etc/systemd/system/APPNAME.system
+```
+```
+[Unit]
+Description=My Cool App
+After=network.target
+
+[Service]
+User=USERNAME
+Group=www-data
+WorkingDirectory=/home/USERNAME/APPFOLDER
+Enviornment="PATH=/home/USERNAME/APPNAME/venv/bin"
+ExecStart=/home/USERNAME/APPNAME/venv/bin/gunicorn --workers 3 --bind 127.0.0.1:8000 SCRIPTNAME:APPNAME
+
+[Install]
+WantedBy=multi.user.target
+```
+
+sudo systemctl daemon-reload
+
+sudo systemctl start APPNAME
+
+sudo systemctl enable APPNAME
+
+sudo nano /etc/nginx/sites-available/APPNAME
+
+```
+server {
+    listen 80;
+    server_name 127.0.0.1;
+
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+```
+
+sudo systemctl restart nginx
