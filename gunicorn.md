@@ -68,7 +68,7 @@ Enviornment="PATH=/home/USERNAME/APPNAME/VENVNAME/bin"
 ExecStart=/home/USERNAME/APPNAME/VENVNAME/bin/gunicorn --workers 3 --bind 127.0.0.1:8000 SCRIPTNAME:APPNAME
 
 [Install]
-WantedBy=multi.user.target
+WantedBy=multi-user.target
 ```
 
 sudo systemctl daemon-reload
