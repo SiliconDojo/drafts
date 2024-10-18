@@ -77,6 +77,8 @@ sudo systemctl start APPNAME
 
 sudo systemctl enable APPNAME
 
+    - Go go 127.0.0.1:8000 in web browser and app should be displayed
+
 sudo nano /etc/nginx/sites-available/APPNAME
 
 ```
