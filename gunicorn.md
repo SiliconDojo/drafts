@@ -43,7 +43,7 @@ def index():
     return('hello world')
 
 if __name__ == "__main__":
-    run(host='0.0.0.0', port=8080)
+    run(host='0.0.0.0', port='8080')
 
 #create a name for your app.  wsgi reference will look like my-app:app_name
 app_name = default_app() 
