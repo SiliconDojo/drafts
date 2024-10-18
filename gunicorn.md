@@ -35,6 +35,7 @@ python3 -m pip install bottle
 python3 -m pip install gunicorn
 ```
 **my-app.py**
+
 When everything is setup you will have to restart your app service (not NGINX) for changes to show to users
 ```
 from bottle import route, run, default_app
