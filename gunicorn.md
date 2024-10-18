@@ -24,7 +24,7 @@ gunicorn --workers 4 --bind 0.0.0.0:8080 gtest:app
 ```
 
 ## Basic Setup
-
+```
 mkdir appname
 cd appname
 sudo apt install python3-venv
@@ -32,7 +32,7 @@ python3 -m venv VENVNAME
 source VENVNAME/bin/activate
 python3 -m pip install bottle
 python3 -m pip install gunicorn
-
+```
 **my-app.py**
 When everything is setup you will have to restart your app service (not NGINX) for changes to show to users
 ```
