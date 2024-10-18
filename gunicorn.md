@@ -25,6 +25,7 @@ gunicorn --workers 4 --bind 0.0.0.0:8080 gtest:app
 
 ## Basic Setup
 ```
+sudo apt install nginx
 mkdir appname
 cd appname
 sudo apt install python3-venv
