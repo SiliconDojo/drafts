@@ -53,7 +53,7 @@ app_name = default_app()
 
 **Create a Service**
 ```
-sudo nano /etc/systemd/system/APPNAME.system
+sudo nano /etc/systemd/system/APPNAME.service
 ```
 ```
 [Unit]
