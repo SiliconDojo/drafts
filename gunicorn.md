@@ -87,7 +87,7 @@ Delete everything in file
 
 ```
 server {
-    listen 80;
+    listen 80 default_server;
     server_name 127.0.0.1;
 
     location / {
