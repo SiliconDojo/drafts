@@ -24,6 +24,14 @@ gunicorn --workers 4 --bind 0.0.0.0:8080 gtest:app
 ```
 
 ## Basic Setup
+
+**Prerequisite:**
+
+You may want to create a specific user account for this app to run under.  Such as a user account named **www**
+```
+sudo adduser www
+```
+
 ```
 sudo apt install nginx
 mkdir appname
