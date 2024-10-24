@@ -111,3 +111,38 @@ server {
 sudo nginx -t
 
 sudo systemctl restart nginx
+
+# SOCKET
+
+sudo chown -R /home/www www:www-data
+
+```
+[Unit]
+Description=My cool app
+After=network.target
+
+[Service]
+User=www
+Group=www-data
+WorkingDirectory=/home/www/myapp
+Environment="PATH=/home/www/myapp/venv/bin"
+ExecStart=/home/www/myapp/venv/bin/gunicorn --workers 3 --bind unix:myapp.sock  myapp:myapp
+[Install]
+WantedBy=multi-user.target
+```
+
+sudo nano /etc/nginx/sites-available/default
+```
+server {
+        listen 80 default_server;
+        server_name 127.0.0.1;
+
+        location / {
+                proxy_pass http://unix:/home/www/myapp/myapp.sock;
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header X-Forwarded-Proto $scheme;
+        }
+}
+```
