@@ -1,26 +1,42 @@
-# Gunicorn
+# Bottle, Gunicorn and NGINX for Production
 
-In Bottle for Run()
+**Sample App for Deployment**
+
+myapp.py
+
+```
+from bottle import route, run, default_app
+
+@route('/')
+def index():
+        return('Hello World')
+
+if __name__=='__main__':
+        run(host='0.0.0.0', port='8080')
+
+myapp = default_app()
+```
+
+**In Bottle for run()**
+
+This will only run the run() if the script is called directly.  If Gunicorn calls it then the run() will not execute.
 ```
 if __name__ == "__main__":
     run(host='0.0.0.0', port=8080)
 ```
 
+**Give the App a Name for Gunicorn**
+
+import default_app and then use it to create an app name at the end of the script.  This allows Gunicorn to access it.  When using Gunicorn you will use script_name:app_name
 ```
-gunicorn --workers 4 app:myapp
+myapp = default_app()
 ```
 
-```
-ps aux | grep gunicorn
-```
+**Run Script with Gunicorn**
 
+This runs the script through Gunicorn with 4 workers and binds to any address on the computer at port 8000.
 ```
-sudo kill -9 <PID>
-```
-
-
-```
-gunicorn --workers 4 --bind 0.0.0.0:8080 gtest:app
+gunicorn --workers 4 --bind 0.0.0.0:8000 myapp:app
 ```
 
 ## Basic Setup
