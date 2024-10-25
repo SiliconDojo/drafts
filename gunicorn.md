@@ -50,8 +50,8 @@ sudo adduser www
 
 ```
 sudo apt install nginx
-mkdir appname
-cd appname
+mkdir APPNAME
+cd APPNAME
 sudo apt install python3-venv
 python3 -m venv VENVNAME
 source VENVNAME/bin/activate
@@ -91,7 +91,7 @@ User=USERNAME
 Group=www-data
 WorkingDirectory=/home/USERNAME/APPFOLDER
 Enviornment="PATH=/home/USERNAME/APPNAME/VENVNAME/bin"
-ExecStart=/home/USERNAME/APPNAME/VENVNAME/bin/gunicorn --workers 3 --bind 127.0.0.1:8000 SCRIPTNAME:APPNAME
+ExecStart=/home/USERNAME/APPNAME/VENVNAME/bin/gunicorn --workers 4 --bind 127.0.0.1:8000 SCRIPTNAME:APPNAME
 
 [Install]
 WantedBy=multi-user.target
@@ -158,7 +158,7 @@ User=www
 Group=www-data
 WorkingDirectory=/home/www/myapp
 Environment="PATH=/home/www/myapp/venv/bin"
-ExecStart=/home/www/myapp/venv/bin/gunicorn --workers 3 --bind unix:myapp.sock  myapp:myapp
+ExecStart=/home/www/myapp/venv/bin/gunicorn --workers 4 --bind unix:myapp.sock  myapp:myapp
 [Install]
 WantedBy=multi-user.target
 ```
