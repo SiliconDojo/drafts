@@ -2,6 +2,8 @@
 
 **Sample App for Deployment**
 
+**Note:** You may want to add a randint function return so that everytime you refresh the page a new random int is shown. This can be used to verify that the page you're seeing wasn't cahed or such.
+
 myapp.py
 
 ```
