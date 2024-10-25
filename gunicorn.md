@@ -41,7 +41,7 @@ gunicorn --workers 4 --bind 0.0.0.0:8000 myapp:app
 
 ## Basic Setup
 
-**Prerequisite:**
+### Prerequisites
 
 You may want to create a specific user account for this app to run under.  Such as a user account named **www**
 ```
@@ -76,8 +76,7 @@ app_name = default_app()
 
 ```
 
-
-**Create a Service**
+### Create a Service
 ```
 sudo nano /etc/systemd/system/APPNAME.service
 ```
@@ -96,16 +95,23 @@ ExecStart=/home/USERNAME/APPNAME/VENVNAME/bin/gunicorn --workers 3 --bind 127.0.
 [Install]
 WantedBy=multi-user.target
 ```
-
+```
 sudo systemctl daemon-reload
+```
 
+```
 sudo systemctl start APPNAME
+```
 
+```
 sudo systemctl enable APPNAME
+```
 
     - Go go 127.0.0.1:8000 in web browser and app should be displayed
 
+```
 sudo nano /etc/nginx/sites-available/default
+```
 
 Delete everything in file
 
@@ -128,7 +134,7 @@ sudo nginx -t
 
 sudo systemctl restart nginx
 
-# SOCKET
+### SOCKET
 
 sudo chown -R /home/www www:www-data
 
