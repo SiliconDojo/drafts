@@ -41,6 +41,21 @@ This runs the script through Gunicorn with 4 workers and binds to any address on
 gunicorn --workers 4 --bind 0.0.0.0:8000 myapp:app
 ```
 
+## Tech Stack
+
+**DNS** - Setup DNS so that Domain Name resolves to IP Address
+
+**OS** - Operating System with permissions and firewall settings
+
+**NGINX** - Reverse Proxy Server to handle and redirect traffic
+
+**Gunicorn** - Multithreaded Web Server for Python
+
+**Bottle** - Python Web App Framework 
+
+**Python** - Main Programming Language
+
+
 ## Basic Setup
 
 ### Prerequisites
