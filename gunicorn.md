@@ -80,6 +80,7 @@ app_name = default_app()
 ```
 sudo nano /etc/systemd/system/APPNAME.service
 ```
+
 ```
 [Unit]
 Description=My Cool App
@@ -95,6 +96,7 @@ ExecStart=/home/USERNAME/APPNAME/VENVNAME/bin/gunicorn --workers 3 --bind 127.0.
 [Install]
 WantedBy=multi-user.target
 ```
+
 ```
 sudo systemctl daemon-reload
 ```
@@ -130,13 +132,21 @@ server {
 }
 ```
 
+Verify NGINX Configurations Work
+```
 sudo nginx -t
-
+```
+```
 sudo systemctl restart nginx
+```
 
-### SOCKET
+### Use a SOCKET Instead of IP Address for Service
+**Note:** This may be more secure, but requires more knowledge of Linux.
 
+Change Permissions for APP DIRECTORY.  Give the User that will access the directroy and the www-data group ownership
+```
 sudo chown -R /home/www www:www-data
+```
 
 ```
 [Unit]
@@ -153,7 +163,24 @@ ExecStart=/home/www/myapp/venv/bin/gunicorn --workers 3 --bind unix:myapp.sock  
 WantedBy=multi-user.target
 ```
 
+```
+sudo systemctl daemon-reload
+```
+
+```
+sudo systemctl start APPNAME
+```
+
+**Verify Service is Working**
+
+Folder permissions are generally the reason for problems.
+```
+sudo systemctl status APPNAME
+```
+
+```
 sudo nano /etc/nginx/sites-available/default
+```
 ```
 server {
         listen 80 default_server;
@@ -167,4 +194,12 @@ server {
                 proxy_set_header X-Forwarded-Proto $scheme;
         }
 }
+```
+
+Verify NGINX Configurations Work
+```
+sudo nginx -t
+```
+```
+sudo systemctl restart nginx
 ```
