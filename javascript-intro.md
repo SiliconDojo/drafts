@@ -26,21 +26,21 @@ const elements = document.getElementsByTagName("div");
 
 # HTML Properties
 
-``
+```
 document.getElementById(id).innerHTML = new HTML
 
 document.getElementById("p2").style.color = "blue";
 
-``
-
+```
+```
 <script>
 document.write(Date());
 </script>
-
+```
 
 
 # Events
-
+```
 Mouse Events
 click - Fired when an element is clicked.
 dblclick - Fired when an element is double-clicked.
@@ -64,9 +64,10 @@ blur - Fired when an element loses focus.
 change - Fired when the value of an element changes.
 input - Fired when the value of an <input>, <textarea>, or <select> element is changed.
 select - Fired when some text is selected.
+```
 
 # Variables
-
+```
 <script>
 if (true) {
 var x = 10;
@@ -76,3 +77,4 @@ console.log(x); // 10 (accessible because var is function-scoped)
 console.log(y); // ReferenceError: y is not defined (y is block-scoped)
 
 </script>
+```
