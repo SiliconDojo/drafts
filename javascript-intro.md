@@ -93,7 +93,7 @@ console.log(y); // ReferenceError: y is not defined (y is block-scoped)
 ```
 <script>
   let message = 'Hello World';
-    document.write(`<h1>${message}</h1>`);
+  document.write(`<h1>${message}</h1>`);
 </script>
 ```
 
