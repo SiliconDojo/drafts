@@ -27,6 +27,12 @@ Javascript is a clientside language that the web browser uses to create interact
 
 All data is sent to the client and then the client runs the script to determine what the user sees.  The user can either store the text data from the server or simply "show source" in the browser to see all data sent to the browser. Do not send confidential or extraneous data for JavaScript to parse.  Use your backend language to send only the data that is actually needed.
 
+## HTML 5 API's
+Allows for Native App like functionality for web apps.
+
+https://developer.mozilla.org/en-US/docs/Web/API
+
+
 # Embedding Javascript
 
 ## <script> tag and src reference
