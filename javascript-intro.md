@@ -29,6 +29,8 @@ All data is sent to the client and then the client runs the script to determine 
 
 # Embedding Javascript
 
+## <script> tag and src reference
+
 **test.html**
 ```
 <script>
@@ -44,11 +46,12 @@ All data is sent to the client and then the client runs the script to determine 
 document.write(' -- and hello to you too');
 ```
 
-**Inline Event Handeler**
+## Inline Event Handler
 
 ```
 <button onclick="alert('hello world')">Button</button>
 ```
+
 # DOM - Document Object Model
 
 The DOM (Document Object Model) allows you to identify and manipulate specfic elements within an HTML document.
