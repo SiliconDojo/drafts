@@ -23,6 +23,10 @@ Javascript is a clientside language that the web browser uses to create interact
 </script>
 ```
 
+## Security
+
+All data is sent to the client and then the client runs the script to determine what the user sees.  The user can either store the text data from the server or simply "show source" in the browser to see all data sent to the browser. Do not send confidential or extraneous data for JavaScript to parse.  Use your backend language to send only the data that is actually needed.
+
 # DOM - Document Object Model
 
 The DOM (Document Object Model) allows you to identify and manipulate specfic elements within an HTML document.
