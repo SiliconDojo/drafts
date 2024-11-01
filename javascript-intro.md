@@ -82,18 +82,14 @@ Numerous elemenst can shae the same **name**
 </script>
 ```
 
-# Elements
+## Elements
 
 ```
-const element = document.getElementById("intro");
+document.getElementById("intro");
 
-const element = document.getElementById("myElement");
+document.getElementsByClassName("myClass");
 
-const elements = document.getElementsByClassName("myClass");
-
-const elements = document.getElementsByTagName("div");
-
-
+document.getElementsByTagName("div");
 ```
 
 # HTML Properties
