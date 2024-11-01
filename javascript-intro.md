@@ -43,6 +43,12 @@ All data is sent to the client and then the client runs the script to determine 
 ```
 document.write(' -- and hello to you too');
 ```
+
+**Inline Event Handeler**
+
+```
+<button onclick="alert('hello world')">Button</button>
+```
 # DOM - Document Object Model
 
 The DOM (Document Object Model) allows you to identify and manipulate specfic elements within an HTML document.
