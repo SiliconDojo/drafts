@@ -138,6 +138,17 @@ select - Fired when some text is selected.
 
 ## Loops
 
+**For Loop**
+```
+<script>
+    let message = "";
+    for (let i = 0; i < 5; i++) {
+        message += ("This is iteration number " + i + "<br>");
+    }
+    document.write(message)
+</script>
+```
+
 **Do While**
 ```
 <script>
