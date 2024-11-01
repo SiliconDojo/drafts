@@ -33,17 +33,11 @@ const elements = document.getElementsByTagName("div");
 # HTML Properties
 
 ```
-document.getElementById(id).innerHTML = new HTML
+document.getElementById(id).innerHTML = 'hello world';
 
 document.getElementById("p2").style.color = "blue";
 
 ```
-```
-<script>
-document.write(Date());
-</script>
-```
-
 
 # Events
 ```
