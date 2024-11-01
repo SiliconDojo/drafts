@@ -127,6 +127,24 @@ Mouse Events
   select - Fired when some text is selected.
 ```
 
+**keydown.html**
+```
+<h1 id="displayKey">Press a key to display here</h1>
+<form>
+    <input type="text" placeholder="Type here..." id="inputField">
+</form>
+
+<script>
+    const displayKey = document.getElementById("displayKey");
+    const inputField = document.getElementById("inputField");
+    
+    inputField.addEventListener("keydown", function(event) {
+        displayKey.textContent = `Key pressed: ${event.key}`;
+    });
+</script>
+```
+
+
 # Variables
 
 Javascript does not have datatypes
