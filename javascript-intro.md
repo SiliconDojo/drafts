@@ -82,6 +82,9 @@ let y = 20;
 console.log(x); // 10 (accessible because var is function-scoped)
 console.log(y); // ReferenceError: y is not defined (y is block-scoped)
 
+</script>
+```
+
 # Concatenation
 
 **Template Literals**
@@ -94,5 +97,4 @@ console.log(y); // ReferenceError: y is not defined (y is block-scoped)
 </script>
 ```
 
-</script>
-```
+
