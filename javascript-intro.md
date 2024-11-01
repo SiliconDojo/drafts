@@ -25,6 +25,34 @@ Javascript is a clientside language that the web browser uses to create interact
 
 # DOM - Document Object Model
 
+The DOM (Document Object Model) allows you to identify and manipulate specfic elements within an HTML document.
+
+There can only be one unique **id** within a document.
+
+Numerous elemenst can shae the same **name**
+
+```
+<h1 name="heading" id="title">This is the Title</h1>
+
+<p>Words, words, and some more words</p>
+
+<h2 name="heading" id="next-title">This is another layer</h2>
+
+<p>And more words</p>
+
+<script>
+    document.getElementById("title").innerHTML = 'a new message';
+
+    // document.querySelectorAll("p").forEach(function (element) {
+    //     element.style.backgroundColor = "green";
+    // });
+
+    // document.querySelectorAll('[name="heading"]').forEach(function (element) {
+    //     element.style.color = "red";
+    // });
+</script>
+```
+
 # Elements
 
 ```
