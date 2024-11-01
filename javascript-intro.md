@@ -149,6 +149,19 @@ select - Fired when some text is selected.
 </script>
 ```
 
+**While Loops**
+```
+<script>
+    let i = 0;
+    let message = "";
+    while (i < 15) {
+        message += ("This is iteration number " + i + "<br>");
+        i++;
+    }
+    document.write(message)
+</script>
+```
+
 **Do While**
 ```
 <script>
