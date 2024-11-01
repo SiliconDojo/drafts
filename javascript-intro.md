@@ -69,13 +69,12 @@ select - Fired when some text is selected.
 # Variables
 ```
 <script>
-if (true) {
-var x = 10;
-let y = 20;
-}
-console.log(x); // 10 (accessible because var is function-scoped)
-console.log(y); // ReferenceError: y is not defined (y is block-scoped)
-
+  if (true) {
+    var x = 10;
+    let y = 20;
+  }
+  console.log(x); // 10 (accessible because var is function-scoped)
+  console.log(y); // ReferenceError: y is not defined (y is block-scoped)
 </script>
 ```
 
@@ -94,8 +93,8 @@ console.log(y); // ReferenceError: y is not defined (y is block-scoped)
 **With +**
 ```
 <script>
-    let greeting = 'Hello';
-    let message = 'World';
-    document.write('<h1>' + greeting + ' ' + message + '</h1>');
+  let greeting = 'Hello';
+  let message = 'World';
+  document.write('<h1>' + greeting + ' ' + message + '</h1>');
 </script>
 ```
