@@ -8,6 +8,12 @@ Javascript Intro
 <button onclick="alert('hello world')">Button</button>
 ```
 
+```
+<script>
+document.write(Date());
+</script>
+```
+
 # DOM - Document Object Model
 
 # Elements
@@ -75,6 +81,18 @@ let y = 20;
 }
 console.log(x); // 10 (accessible because var is function-scoped)
 console.log(y); // ReferenceError: y is not defined (y is block-scoped)
+
+# Concatenation
+
+**Template Literals**
+
+**Note** Backticks not Single Quotation Marks
+```
+<script>
+  let message = 'Hello World';
+    document.write(`<h1>${message}</h1>`);
+</script>
+```
 
 </script>
 ```
