@@ -214,7 +214,7 @@ const z = 3;
 </script>
 ```
 
-## Loops
+# Loops
 
 **For Loop**
 ```
@@ -250,5 +250,36 @@ const z = 3;
         i++;
     } while (i < 5);
     document.write(message)
+</script>
+```
+
+# If Else Statements
+
+```
+<h1 id="entry">What's your age?</h1>
+<form id="ageForm">
+    <input type="text" placeholder="Age?" id="inputField">
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    const entryText = document.getElementById("entry");
+    const inputField = document.getElementById("inputField");
+
+    ageForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const age = Number(inputField.value);
+
+        if (age >= 90) {
+            message = "You're too old"
+        } else if (age < 90 && age >=21) {
+            message = "Please Enter You Are Old Enough"
+        } else if (age < 21) {
+            message = "You're too young"
+        } else {
+            message = "hmmmmm...???"
+        }
+        entryText.textContent = message;
+    });
 </script>
 ```
