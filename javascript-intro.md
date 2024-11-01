@@ -108,6 +108,17 @@ select - Fired when some text is selected.
 ```
 
 # Variables
+
+Javascript does not have datatypes
+
+**let** and **const** are the current way to declare a variable
+```
+var x = 1;
+let y = 2;
+const z = 3;
+```
+
+
 ```
 <script>
   if (true) {
