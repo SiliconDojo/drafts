@@ -144,6 +144,25 @@ Mouse Events
 </script>
 ```
 
+**hover.html**
+```
+<h1 id="hoverText">Hover over this text</h1>
+
+<script>
+    const hoverText = document.getElementById("hoverText");
+
+    const originalText = "Hover over this text";
+    const hoverMessage = "You're hovering over me!";
+
+    hoverText.addEventListener("mouseover", function () {
+        hoverText.textContent = hoverMessage;
+    });
+
+    hoverText.addEventListener("mouseout", function () {
+        hoverText.textContent = originalText;
+    });
+</script>
+```
 
 # Variables
 
