@@ -103,28 +103,28 @@ document.getElementById("p").style.color = "blue";
 # Events
 ```
 Mouse Events
-click - Fired when an element is clicked.
-dblclick - Fired when an element is double-clicked.
-mousedown - Fired when a mouse button is pressed on an element.
-mouseup - Fired when a mouse button is released over an element.
-mouseenter - Fired when the mouse pointer enters an element.
-mouseleave - Fired when the mouse pointer leaves an element.
-mousemove - Fired when the mouse pointer is moving over an element.
-mouseover - Fired when the mouse pointer is moved onto an element or one of its children.
-mouseout - Fired when the mouse pointer moves out of an element.
-contextmenu - Fired when the right mouse button is clicked (usually opens the context menu).
+  click - Fired when an element is clicked.
+  dblclick - Fired when an element is double-clicked.
+  mousedown - Fired when a mouse button is pressed on an element.
+  mouseup - Fired when a mouse button is released over an element.
+  mouseenter - Fired when the mouse pointer enters an element.
+  mouseleave - Fired when the mouse pointer leaves an element.
+  mousemove - Fired when the mouse pointer is moving over an element.
+  mouseover - Fired when the mouse pointer is moved onto an element or one of its children.
+  mouseout - Fired when the mouse pointer moves out of an element.
+  contextmenu - Fired when the right mouse button is clicked (usually opens the context menu).
 2. Keyboard Events
-keydown - Fired when a key is pressed down.
-keypress - Fired when a key is pressed (deprecated; prefer keydown or keyup).
-keyup - Fired when a key is released.
+  keydown - Fired when a key is pressed down.
+  keypress - Fired when a key is pressed (deprecated; prefer keydown or keyup).
+  keyup - Fired when a key is released.
 3. Form Events
-submit - Fired when a form is submitted.
-reset - Fired when a form is reset.
-focus - Fired when an element (such as input) receives focus.
-blur - Fired when an element loses focus.
-change - Fired when the value of an element changes.
-input - Fired when the value of an <input>, <textarea>, or <select> element is changed.
-select - Fired when some text is selected.
+  submit - Fired when a form is submitted.
+  reset - Fired when a form is reset.
+  focus - Fired when an element (such as input) receives focus.
+  blur - Fired when an element loses focus.
+  change - Fired when the value of an element changes.
+  input - Fired when the value of an <input>, <textarea>, or <select> element is changed.
+  select - Fired when some text is selected.
 ```
 
 # Variables
