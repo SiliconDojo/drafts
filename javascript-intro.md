@@ -135,3 +135,18 @@ select - Fired when some text is selected.
   document.write('<h1>' + greeting + ' ' + message + '</h1>');
 </script>
 ```
+
+## Loops
+
+**Do While**
+```
+<script>
+    let i = 0;
+    let message = "";
+    do {
+        message += ("This is iteration number " + i + "<br>");
+        i++;
+    } while (i < 5);
+    document.write(message)
+</script>
+```
