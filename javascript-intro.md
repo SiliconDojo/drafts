@@ -38,6 +38,14 @@ White space and lines do not matter.
 
 **;** semi colons are used as the instruction delimiter
 
+## Performance
+
+Many people use Javascript blockers so your code may not run.
+
+Browsers block some Javascript by default.
+
+Loading and running Javascript may slow page load times. Putting Javascript at the end of a web page is done so that the users sees the web page before waiting for Javascript to fully load.
+
 # Embedding Javascript
 
 ## <script> tag and src reference
