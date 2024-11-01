@@ -10,7 +10,7 @@ Javascript Intro
 
 ```
 <script>
-document.write(Date());
+  document.write(Date());
 </script>
 ```
 
