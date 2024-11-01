@@ -5,8 +5,8 @@ Javascript Intro
 
 Javascript is a clientside language that the web browser uses to create interactivity with web apps.
 
--HTML - Creates the basic frame of the user interface. (Frame or House)
--CSS - Makes the user iterface pretty. (Paint and Siding on House)
+* -HTML - Creates the basic frame of the user interface. (Frame or House)
+* -CSS - Makes the user iterface pretty. (Paint and Siding on House)
 -Javascript - Provides interqctivity for app. (Dish washer or Garbage Disposal in house) 
 -OS - Provides basic systems connectivity for app to connect to network and storage. (Plumbing and Electrical in house)
 -Python - Provides backend logic and connectivity to API's (Municiple Water or Electric)
