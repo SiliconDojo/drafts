@@ -283,3 +283,21 @@ const z = 3;
     });
 </script>
 ```
+
+# Functions
+
+```
+<body id="body">
+<input type="text" id="color" placeholder="Enter a color...">
+<button onclick="checkColor()">Submit</button>
+</body>
+
+<script>
+    function checkColor() {
+        const color = document.getElementById("color").value;
+        const bodyElement = document.getElementById("body");
+
+        bodyElement.style.backgroundColor = color;
+    }
+</script>
+```
