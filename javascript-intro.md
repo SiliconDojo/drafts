@@ -32,6 +32,11 @@ Allows for Native App like functionality for web apps.
 
 https://developer.mozilla.org/en-US/docs/Web/API
 
+## Syntax
+
+White space and lines do not matter.
+
+**;** semi colons are used as the instruction delimiter
 
 # Embedding Javascript
 
