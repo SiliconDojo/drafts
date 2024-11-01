@@ -92,13 +92,12 @@ document.getElementsByClassName("myClass");
 document.getElementsByTagName("div");
 ```
 
-# HTML Properties
+## Properties and Style
 
 ```
 document.getElementById(id).innerHTML = 'hello world';
 
-document.getElementById("p2").style.color = "blue";
-
+document.getElementById("p").style.color = "blue";
 ```
 
 # Events
